@@ -14,7 +14,7 @@ def fibonaci(number):
         p=2
       else:
         p=3
-      print (p)
+     # print (p)
 
     else:
       previous = 1
@@ -25,7 +25,7 @@ def fibonaci(number):
         current = previous + current
         previous = t
         p = current
-        print (p)
+       # print (p)
 
 
     return p
@@ -42,17 +42,17 @@ while (i < 20 and flag == True):
   #print(" tyxaios---", a)
 
   if ((a**p)%p != a % p):
-    print("a ^ p ---", a ** p)
-    print("a % p ---", a % p)
-    print(a ** p != a % p)
+   # print("a ^ p ---", a ** p)
+   # print("a % p ---", a % p)
+    #print(a ** p != a % p)
     flag = False
   
   i = i + 1
 #-------------------------------
 if (flag == True):
-  print("o ", p, " einai protos")
+  print("ο", number,"ος όρος ειναί ο",p, "και  είναι πρώτος")
 else:
-  print("o ", p," den einai protos")
+  print("ο", number,"ος όρος ειναί ο",p, "και δεν είναι πρώτος")
 
 
 
