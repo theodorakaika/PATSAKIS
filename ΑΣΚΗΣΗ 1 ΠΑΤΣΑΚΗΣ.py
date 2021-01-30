@@ -37,7 +37,7 @@ def count1(list):
   return counter
 
 #------------------
-# τοποθέτηση 'S' σε τυχαίες θέσεις
+
 def fillMe(list):
 
   v = len(list[0]) # βάση v
@@ -48,8 +48,8 @@ def fillMe(list):
   for time in range(half):
     j = random.randrange(y)
     i = random.randrange(v)
-    if list[j][i] == "O":
-      list[j][i] = "S"
+    if list[j][i] == 1:
+      list[j][i] = 0
       found += 1
     else:
       while list[j][i] == 1:
@@ -84,16 +84,16 @@ def getUserInput():
 
 v, y, show = getUserInput() # παραλαβή τιμών από τον χρήστη
 total = v * y # total - πλήθος στοιχείων
-theList = square = [] # square λίστα 3 x 3
+theList = square = [] # square λίστα 
 total1 = 0 # πόσες τετράδες 1 βρέθηκαν συνολικά
 columns, rows = (v - 3, y - 3) #αρχικές τιμές για τα όρια
 loops = 100
 
 for repeat in range(loops):
   
-  # αρχικοποίηση του πίνακα με 'O'
+  # αρχικοποίηση του πίνακα με 0
   theList = [[0 for i in range(v)] for j in range(y)]    
-  found = fillMe(theList) # τοποθέτηση τυχαίων 'S'
+  found = fillMe(theList) 
   
   if show:
     if(repeat > 0):
@@ -121,7 +121,7 @@ for repeat in range(loops):
 
   if show:
     print("\nΈγινε τελικός υπολογισμός για τον πίνακα No.", repeat + 1)
-    print("Βρέθηκαν συνολικά:", loops1,"'SOS' σε αυτόν.")
+    print("Βρέθηκαν συνολικά:", loops1,"τετράδες 1 σε αυτόν.")
 
   loops1 = 0
 
