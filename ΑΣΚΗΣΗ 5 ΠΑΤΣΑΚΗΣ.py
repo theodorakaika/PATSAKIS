@@ -21,7 +21,7 @@ def soscount(list):
     if list[row][j] == "S" and list[row][j + 1] == "O" and list[row][j + 2] == "S":
       counter = counter + 1
 
-  # cέλεγχος στις στήλες
+  # έλεγχος στις στήλες
   for row in range (j + 3):
       if list[i][row] == "S" and list[i + 1][row]=="O" and list[i + 2][row] == "S":
         counter = counter + 1
